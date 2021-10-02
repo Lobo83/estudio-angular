@@ -7,7 +7,7 @@ import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-ur
 const routes: Routes = [{
   path: '', component: HomeComponent
   
-},{path: 'product', component: ProductDetailComponent}
+},{path: 'product/:id', component: ProductDetailComponent}
 ,{path: '**', component: WrongUrl404ComponentComponent}
 ];
 
