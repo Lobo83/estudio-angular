@@ -12,6 +12,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SearchComponent } from './search/search.component';
 import { StarsComponent } from './stars/stars.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-url404-component.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ProductItemComponent,
     ProductDetailComponent,
     SearchComponent,
-    StarsComponent
+    StarsComponent,
+    WrongUrl404ComponentComponent
   ],
   imports: [
     BrowserModule,

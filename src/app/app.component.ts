@@ -11,6 +11,6 @@ export class AppComponent {
 
   constructor(private _router: Router){}
   navigateToProducDetail(){
-    this._router.navigate(["/product"]);
+    this._router.navigate(["/product"],{skipLocationChange: true});
   }
 }
