@@ -9,6 +9,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
 
   productId: string="";
+  sellerId = 123;
   router: ActivatedRoute;
   constructor(router: ActivatedRoute) {
     //this.productId = router.snapshot.paramMap.get('id')|| ""; esto no vale si se introduce manualmente la direccion en el navegador. Mejor suscribirse

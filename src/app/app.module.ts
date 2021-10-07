@@ -13,6 +13,8 @@ import { SearchComponent } from './search/search.component';
 import { StarsComponent } from './stars/stars.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-url404-component.component';
+import { SellerInfoComponent } from './seller-info/seller-info.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-ur
     ProductDetailComponent,
     SearchComponent,
     StarsComponent,
-    WrongUrl404ComponentComponent
+    WrongUrl404ComponentComponent,
+    SellerInfoComponent,
+    ProductDescriptionComponent
   ],
   imports: [
     BrowserModule,

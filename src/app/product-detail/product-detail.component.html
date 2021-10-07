@@ -1,1 +1,5 @@
-<p>product-detail works!, received id: {{productId}}</p>
+<div class="product">
+<h1>Product detail for product : {{productId}}</h1>
+<router-outlet></router-outlet>
+<p><a [routerLink]="['./seller', sellerId]">Seller info</a></p>
+</div>
