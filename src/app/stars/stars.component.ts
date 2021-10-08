@@ -23,9 +23,7 @@ export class StarsComponent implements OnInit {
 
   ngOnInit(): void {
     for (let i=1 ; i<=this.count; i++){
-      var isEmpty=i>this.rating;
-      console.log(isEmpty+" i vale "+i+" rating es "+this.rating);
-      this.stars.push(isEmpty);
+      this.stars.push(i>this.rating);
     }
   }
 
