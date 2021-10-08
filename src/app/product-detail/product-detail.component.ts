@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Product, ProductService } from '../shared/product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,19 +9,23 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ProductDetailComponent implements OnInit {
 
-  productId: string="";
+  
   sellerId = 123;
   router: ActivatedRoute;
-  constructor(router: ActivatedRoute) {
+  product?: Product;
+  constructor(router: ActivatedRoute, private productService: ProductService) {
     //this.productId = router.snapshot.paramMap.get('id')|| ""; esto no vale si se introduce manualmente la direccion en el navegador. Mejor suscribirse
     this.router=router;
    }
 
   ngOnInit(): void {
+    var productId:number;
     this.router.paramMap.subscribe((params : ParamMap)=> {  
-      this.productId=params.get('id')||"";  
-      
+      productId=parseInt(params.get('id') || "0");   
+      this.product=this.productService.getProductById(productId);
     });  
+    
+
   }
 
 }

@@ -1,5 +1,14 @@
-<div class="product">
-<h1>Product detail for product : {{productId}}</h1>
+<div class="figure">
+    <img src="http://placehold.it/820x320">
+    <div class="figure-caption">
+        <h4 class="text-left">{{product?.price | currency}}</h4>
+        <h4 > <a [routerLink]="['/product', product?.id]">{{product?.title}}</a></h4>
+        <p >{{product?.description}} </p>
+    </div>
+    <div class="ratings">
+        <app-stars [rating]="product?.rating || 0"></app-stars>
+    </div>
+
 <router-outlet></router-outlet>
 <p><a [routerLink]="['./seller', sellerId]">Seller info</a></p>
 </div>

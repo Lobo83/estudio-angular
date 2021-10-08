@@ -1,1 +1,11 @@
-<p>product-item works!</p>
+<div class="figure">
+    <img src="http://placehold.it/320x150">
+    <div class="figure-caption">
+        <h4 class="text-left">{{product?.price | currency}}</h4>
+        <h4 > <a [routerLink]="['/product', product?.id]">{{product?.title}}</a></h4>
+        <p >{{product?.description}} </p>
+    </div>
+    <div class="rating">
+        <app-stars [rating]="product?.rating || 0"></app-stars>
+    </div>
+</div>
