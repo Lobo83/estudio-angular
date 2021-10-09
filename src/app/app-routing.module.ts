@@ -5,18 +5,21 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-url404-component.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [{
   path: '', component: HomeComponent
-  
-},{path: 'product/:id', component: ProductDetailComponent,
+
+}, {
+  path: 'product/:id', component: ProductDetailComponent,
+  canActivate: [LoginGuard],
   children: [{
-    path : '', component: ProductDescriptionComponent
-  },{
-    path : 'seller/:id', component: SellerInfoComponent
+    path: '', component: ProductDescriptionComponent
+  }, {
+    path: 'seller/:id', component: SellerInfoComponent
   }]
 },
-{path: '**', component: WrongUrl404ComponentComponent}
+{ path: '**', component: WrongUrl404ComponentComponent }
 ];
 
 @NgModule({
