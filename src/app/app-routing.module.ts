@@ -6,6 +6,7 @@ import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-url404-component.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { LoginGuard } from './guards/login.guard';
+import { LazyModule } from './lazy/lazy.module';
 
 const routes: Routes = [{
   path: '', component: HomeComponent
@@ -20,7 +21,10 @@ const routes: Routes = [{
     path: 'seller/:id', component: SellerInfoComponent
   }]
 },
-{ path: '**', component: WrongUrl404ComponentComponent }
+//{ path: 'lazy', loadChildren: 'app/lazy/lazy.module#LazyModule'}, -->esta manera no funciona, tampoco con ./lazy/lazy.module
+{ path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)},
+{ path: '**', component: WrongUrl404ComponentComponent },
+
 ];
 
 @NgModule({
