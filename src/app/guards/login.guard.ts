@@ -10,7 +10,7 @@ export class LoginGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      let loggedIn = Math.random() < 0.5;
+      let loggedIn = Math.random() < 0.9;
       if(!loggedIn){
         alert("No estas logueado");
         this.router.navigate(["/"]);
