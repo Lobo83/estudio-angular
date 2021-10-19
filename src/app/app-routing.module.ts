@@ -34,6 +34,6 @@ const routes: Routes = [{
                                         preloadingStrategy: MyCustomPreloadingStrategy
                                         })],
   exports: [RouterModule],
-  providers: [MyCustomPreloadingStrategy]
+ // providers: [MyCustomPreloadingStrategy]//no necesario si en la estrategia ponemos providedIn: 'root' en @Injectable
 })
 export class AppRoutingModule { }

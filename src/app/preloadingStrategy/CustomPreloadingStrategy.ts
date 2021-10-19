@@ -3,7 +3,9 @@ import { PreloadingStrategy, Route } from '@angular/router';
 import { of, Observable } from 'rxjs';
 
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class MyCustomPreloadingStrategy implements PreloadingStrategy{
     preload(route: Route, load: () => Observable<any>): Observable<any> {
         console.log('Preload Path: ' + route.path);
