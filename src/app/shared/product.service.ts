@@ -1,17 +1,7 @@
 import { Injectable } from '@angular/core';
+import { AbstractProductService, Product } from './abstract-product-service.service';
 
-export class Product {
-  
-  constructor(
-    public id?: number,
-    public title?: string,
-    public price?: number,
-    public rating?: number,
-    public description?: string,
-    public categories?: string[]
-  ) { }
 
-}
 const products = [{
   'id': 1,
   'title': 'Producto 1',
@@ -44,16 +34,36 @@ const products = [{
   'description': 'lorem ipsum',
   'categories': ['electronic', 'hardware']
 }];
+/**
+ * Product Service
+ *
+ * @export
+ * @class ProductService
+ * @extends {AbstractProductService}
+ */
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProductService extends AbstractProductService {
 
-  constructor() { }
+  constructor() { super();}
+  /**
+   *
+   *
+   * @return {*}  {Product[]}
+   * @memberof ProductService
+   */
   getProducts(): Product[] {
     //Ojo que products es una constante de objetos json, formalmente no esta tipado como Product. También, si cambias el nombre de algun atributo, la linea de abajo falla. Interesante
     return products.map(p => new Product(p.id, p.title, p.price, p.rating, p.description, p.categories));
   }
+  /**
+   *
+   *
+   * @param {number} productId
+   * @return {*}  {Product}
+   * @memberof ProductService
+   */
   getProductById(productId:number): Product{
     var product = products.find(p=>p.id===productId);
     return new Product(product?.id||0,product?.title||"",product?.price||0,product?.rating||0,product?.description||"",product?.categories||[]);
