@@ -15,6 +15,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-url404-component.component';
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { AuctionMaterialModule } from './auction-material/auction-material.module';
+import {FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { ProductDescriptionComponent } from './product-description/product-descr
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuctionMaterialModule,
+    FormsModule
+          
   ],
   providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]

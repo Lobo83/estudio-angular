@@ -1,4 +1,4 @@
-<div class="figure">
+<!--<div class="figure">
     <img src="http://placehold.it/320x150">
     <div class="figure-caption">
         <h4 class="text-left">{{product?.price | currency}}</h4>
@@ -9,3 +9,14 @@
         <app-stars [rating]="product?.rating || 0"></app-stars>
     </div>
 </div>
+-->
+<mat-card>
+    <mat-card-title>{{product?.title }}</mat-card-title>
+    <img mat-card-image src="http://placehold.it/320x150">
+    <mat-card-content>
+        {{product?.description }}
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button color="accent" [routerLink]="['/product', product?.id]">view</a>
+    </mat-card-actions>
+</mat-card>

@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+este import está disponible por haber hecho npm install --save @angular/material @angular/cdk @angular/animations (ojo, lo hice por separado)
+
+
+*/
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'
