@@ -22,6 +22,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
     this.productTitle.valueChanges.pipe(
       debounceTime(500)
     ).subscribe(value => doSomethingFancy(value));
+    this.productTitle.statusChanges.subscribe(status=>console.log("Status vale "+status));
     
    }
 
