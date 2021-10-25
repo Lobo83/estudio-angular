@@ -16,7 +16,7 @@ import { WrongUrl404ComponentComponent } from './wrong-url404-component/wrong-ur
 import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { AuctionMaterialModule } from './auction-material/auction-material.module';
-import {FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,7 +38,8 @@ import {FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     AuctionMaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
           
   ],
   providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],

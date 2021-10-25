@@ -21,10 +21,10 @@
 -->
 <form #f="ngForm">
 	<mat-form-field>
-		<input matInput type="text" placeholder="Product title" name="title" ngModel />
+		<input matInput type="text" placeholder="Product title" name="title"  [formControl]="productTitle" />
 	</mat-form-field>
 	<mat-form-field>
-		<input matInput type="number" #productPrice placeholder="Product price" name="price" ngModel  />
+		<input matInput type="number" #productPrice placeholder="Product price" name="price"   />
 	</mat-form-field>
 	<mat-form-field>
 		<mat-select placeholder="Category" name="category" ngModel>
