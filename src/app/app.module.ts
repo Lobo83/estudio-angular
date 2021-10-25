@@ -17,6 +17,8 @@ import { SellerInfoComponent } from './seller-info/seller-info.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { AuctionMaterialModule } from './auction-material/auction-material.module';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WeatherComponent } from './weather/weather.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,14 +34,16 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
     StarsComponent,
     WrongUrl404ComponentComponent,
     SellerInfoComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuctionMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
           
   ],
   providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
