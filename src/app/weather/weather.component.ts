@@ -18,7 +18,7 @@ export class WeatherComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.searchControl.valueChanges.pipe(debounceTime(500),switchMap(city=>this.getWeather(city)),
+    this.searchControl.valueChanges.pipe(switchMap(city=>this.getWeather(city)),
     ).subscribe(
       res =>{
         this.weather = `Current temperature is ${res.ciudades[0].temperatures.max}`
