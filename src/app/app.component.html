@@ -1,6 +1,6 @@
 <!-- shows navbar component -->
 <app-navbar></app-navbar>
-<div>
+
 <div class="container">
   <div class="row">
     <div class="col-md-3">
@@ -15,6 +15,20 @@
     </div>
   </div>
 </div>
+
+
+<div class="parent" fxLayout="row" fxLayout.sm="column"> <!--fxLayout="row" despliega los hijos a lo larg de una fila, 
+  fxLayout="column" despliega los hijos en una columna
+  fxLayout.sm permite modificar la disposición si la pantalla utilizada es pequeña (menos de 560-959px). Posibles valores son:
+  xs: menos de 559 px
+  sm: 560-959 px
+  md: 960-1279 px
+  lg: 1280-1919 px
+  xl: 1920-5000 px
+-->
+  <div fxFlex="30%" class="left">left</div> <!--si no se especifica nada, cada div hija tiene el tamaño de 50%, -->
+  <div fxFlex="70%" class="right">right</div>
+</div>
+
 <!-- shows footer -->
 <app-footer></app-footer>
-</div>

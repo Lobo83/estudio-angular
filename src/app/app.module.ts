@@ -19,6 +19,7 @@ import { AuctionMaterialModule } from './auction-material/auction-material.modul
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     AuctionMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
           
   ],
   providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
