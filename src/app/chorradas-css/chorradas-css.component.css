@@ -1,0 +1,37 @@
+h2 {
+    color: blue;
+    
+}
+
+h2::first-letter{
+    color: yellow;
+    font-size: 100pt;
+}
+/*elementos que tienen como clase chorrada. Ojo, si un elemento define clase e id, el estilo del id tiene prioridad
+si se quiere limitar a un tipo de componente html concreto hay que ponerlo delante: h2.chorrada solo aplica a las etiquetas h2 que tengan la clase chorrada
+*/
+.chorrada {
+    color: red;
+}
+
+/*elementos que tienen como id caca
+si se quiere limitar a un tipo de componente html concreto hay que ponerlo delante: h2.caca solo aplica a las etiquetas h2 que tengan la id caca
+*/
+#caca{color: brown;}
+
+.cajaBlock {
+    border-width: thick;
+    border-style: solid;
+    /*esto se puede sustituir por border: thick solid*/
+    color: black;
+    display: block;
+}
+.cajaLinea{
+    border-width: thick;
+    border-style: solid;
+    /*esto se puede sustituir por border: thick solid*/
+    color: black;
+    display: inline-block;
+    margin: 5% 0 0 5%; /*espacio entre el borde de la caja y el exterior. 1 valor aplica a los cuatro lados, se puede definir valor para los 4 lados*/
+    padding: 10px; /*espacio entre el contenido y el borde de la caja. es Relleno. 1 valor aplica a los cuatro lados, se puede definir valor para los 4 lados*/
+}

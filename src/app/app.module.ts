@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ChorradasCssComponent } from './chorradas-css/chorradas-css.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     WrongUrl404ComponentComponent,
     SellerInfoComponent,
     ProductDescriptionComponent,
-    WeatherComponent
+    WeatherComponent,
+    ChorradasCssComponent
   ],
   imports: [
     BrowserModule,
