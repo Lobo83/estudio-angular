@@ -33,5 +33,6 @@ si se quiere limitar a un tipo de componente html concreto hay que ponerlo delan
     color: black;
     display: inline-block;
     margin: 5% 0 0 5%; /*espacio entre el borde de la caja y el exterior. 1 valor aplica a los cuatro lados, se puede definir valor para los 4 lados*/
+    
     padding: 10px; /*espacio entre el contenido y el borde de la caja. es Relleno. 1 valor aplica a los cuatro lados, se puede definir valor para los 4 lados*/
 }
